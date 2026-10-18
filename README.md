@@ -41,38 +41,8 @@ npm run dev
 
 ---
 
-## 二、上传到 GitHub
 
-### 方式 A：命令行推送（推荐）
-
-先在 GitHub 网页上**新建一个空仓库**（不要勾选自动生成 README），然后在本项目目录里执行：
-
-```bash
-git init
-git add .
-git commit -m "上班日记 v1"
-git branch -M main
-git remote add origin https://github.com/你的用户名/仓库名.git
-git push -u origin main
-```
-
-`.gitignore` 已经配好，`node_modules`、`dist` 等不会上传。
-
-### 方式 B：网页直接上传（不会命令行时用这个）
-
-1. 在 GitHub 新建空仓库
-2. 打开仓库页面 → `uploading an existing file`
-3. 把本项目的文件拖进去（**不要**拖 `node_modules` 和 `dist` 文件夹）
-4. 点 `Commit changes`
-
-### 上传后想让别人也能访问？
-
-在 GitHub 仓库里进 `Settings → Pages`，或者用 Netlify / Vercel 导入仓库，
-执行 `npm run build` 后把 `dist/` 目录作为发布目录即可。
-
----
-
-## 三、目录结构
+## 二、目录结构
 
 ```text
 work-diary/
@@ -124,7 +94,7 @@ work-diary/
 
 ---
 
-## 四、数据说明
+## 三、数据说明
 
 浏览器里只有一条记录：
 
@@ -148,7 +118,7 @@ work-diary/
 
 ---
 
-## 五、装到手机上
+## 四、装到手机上
 
 先把它部署成一个公开网址（见上面「上传后想让别人也能访问」），然后：
 
@@ -166,7 +136,7 @@ work-diary/
 
 ---
 
-## 六、常见问题
+## 五、常见问题
 
 **装依赖报错 / 卡住？**
 加参数：`npm install --legacy-peer-deps`。
